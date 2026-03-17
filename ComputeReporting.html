@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CVPR 2026 Compute Reporting</title>
+    <meta
+      name="description"
+      content="CVPR 2026 Compute Reporting Form Author Guidelines and FAQ."
+    />
+    <link
+      href="https://cvpr.thecvf.com/Conferences/2026/ComputeReporting"
+      rel="canonical"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/call-for-papers.css" />
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="main container pb-12 pt-8" id="main">
+      <h1 class="page-title">Compute Reporting Guidelines</h1>
+
+      <section
+        class="card mb-8"
+        style="
+          border-left: 4px solid var(--color-primary);
+          background: var(--color-bg-subtle);
+        "
+      >
+        <p class="mb-0">
+          <a
+            href="ComputeReportingClarification.html"
+            style="font-weight: 600; color: var(--color-primary)"
+            >See the Author Compute Reporting Clarification &rarr;</a
+          >
+        </p>
+      </section>
+
+      <section class="content-section mt-8">
+        <p class="policy-desc mb-4">
+          The Compute Reporting Form (CRF) is a pilot initiative designed to
+          increase transparency around computational resources in computer
+          vision research. By collecting data on GPU/CPU usage, training time,
+          and efficiency metrics, we aim to understand the computational
+          landscape of our research - from resource requirements to efficiency
+          innovations.
+        </p>
+        <p class="policy-desc mb-4">
+          <strong
+            >This reporting will not affect your paper's acceptance
+            decision</strong
+          >
+          - the data is reviewed only by a separate Compute Reporting Committee
+          and will not be shared with reviewers, Area Chairs, or Senior Area
+          Chairs.
+        </p>
+        <p
+          class="policy-desc mb-6"
+          style="
+            color: var(--color-error);
+            font-weight: 600;
+            padding: var(--space-4);
+            background: rgba(220, 38, 38, 0.05);
+            border-radius: var(--radius-md);
+          "
+        >
+          Submitting the CRF is mandatory. The CRF is due with your
+          supplementary materials. Section 1 (Hardware Specifications) and
+          Section 5 (Verification and Submission) are required and take
+          approximately 5 minutes to complete, covering basic information about
+          your hardware infrastructure. Sections 2-4 are optional but
+          encouraged, allowing you to report compute costs, performance metrics,
+          development history, and anonymized training logs. Papers that
+          complete Sections 1-3 &amp; 5 are eligible for recognition awards,
+          while only papers that complete all sections are eligible for all
+          Compute Reporting recognition awards.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Recognition Program</h2>
+        <p class="policy-desc">
+          Papers that complete sections of the CRF may receive recognition for
+          computational excellence. The
+          <strong>"Efficient CVPR" Badge</strong> and
+          <strong>"CVPR Compute Gold Star"</strong> awards recognize strong
+          efficiency within task categories and outstanding efficiency
+          achievements, and are available to papers that complete Sections 1-3.
+          The <strong>"CVPR Compute Transparency Champion"</strong> award
+          recognizes high-quality anonymized W&amp;B log submissions and
+          requires completing all sections including Section 4. Awards are
+          determined by the Compute Reporting Committee using objective metrics
+          (such as compute per performance improvement) along with other
+          criteria as determined by the committee, with comparisons made within
+          similar task categories to ensure fair evaluation. Recognized papers
+          will receive special presentation highlights during the conference and
+          featured placement on the conference website. Award results will be
+          announced during the conference.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>To Complete the Form</h2>
+        <div class="policy-item">
+          <p class="policy-desc mb-4">
+            Review the prefilled example (<a
+              href="https://media.eventhosts.cc/Conferences/CVPR2026/CVPR26%20CRF%20prefilled%20example.pdf"
+              target="_blank"
+              rel="noopener"
+              ><strong>CVPR26 CRF prefilled example.pdf</strong></a
+            >) to see how to report each section with realistic values. Fill out
+            the CRF (<a
+              href="https://media.eventhosts.cc/Conferences/CVPR2026/CVPR26%20Compute%20Reporting%20Form.pdf"
+              target="_blank"
+              rel="noopener"
+              ><strong>CVPR26 Compute Reporting Form.pdf</strong></a
+            >) with your paper's computational details. Section 1 (Hardware
+            Specifications) is mandatory. Section 2 (Task and Compute Reporting)
+            and subsequent sections are optional but strongly encouraged for
+            authors seeking recognition awards. If you cannot or prefer not to
+            report computational data, you may provide an explanation in Section
+            5.2 (Additional Comments). Optionally, you may submit anonymized
+            Weights &amp; Biases logs using the provided anonymization tool.
+            Submit the completed form and any anonymized logs through the
+            supplementary materials submission system by the deadline. For
+            detailed instructions, including W&amp;B log anonymization guidance,
+            consult the full CRF form and accompanying FAQ.
+          </p>
+          <p class="policy-desc mb-4">
+            <strong class="policy-title"
+              >Note on heterogeneous environments:</strong
+            >
+            If you used multiple GPU types or varied hardware configurations,
+            report the primary or most-used configuration in Section 1. You can
+            describe the full range of hardware in the Additional Comments
+            section (5.2).
+          </p>
+          <p
+            class="policy-desc"
+            style="
+              color: var(--color-text);
+              background: rgba(18, 4, 227, 0.1);
+              padding: var(--space-3);
+              border-radius: var(--radius-md);
+              font-weight: 600;
+            "
+          >
+            Important: Do not flatten or manipulate the PDF - save the original
+            PDF file after filling it out. Flattening (such as using "Print to
+            PDF" in macOS Preview app) removes the form fields needed for
+            automated data processing.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Data Protection and Privacy</h2>
+        <p class="policy-desc">
+          The Compute Reporting initiative follows strict data protection
+          standards. CRF data is processed independently from the paper review
+          process and is never shared with reviewers. All analyses use
+          anonymized data, and published results are appropriately aggregated.
+          For complete details on how your data is collected, used, stored, and
+          protected, please review the
+          <a href="ComputeReportingDataPolicy.html"
+            ><strong>Data Protection and Retention Policy</strong></a
+          >.
+        </p>
+      </section>
+
+      <section
+        class="content-section card mb-12 mt-12"
+        style="background: var(--color-bg-subtle)"
+      >
+        <h2
+          style="
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: var(--space-4);
+          "
+        >
+          FAQ Contents
+        </h2>
+        <ol class="ordered-policy-list policy-desc mb-0">
+          <li>
+            <a href="#faq-1">Why are we collecting compute information?</a>
+          </li>
+          <li>
+            <a href="#faq-2"
+              >Will my compute reporting affect my paper's acceptance
+              decision?</a
+            >
+          </li>
+          <li>
+            <a href="#faq-3">How is my CRF data accessed and protected?</a>
+          </li>
+          <li><a href="#faq-4">How will the CRF data be used?</a></li>
+          <li>
+            <a href="#faq-5"
+              >What if my research used a lot of computational resources?</a
+            >
+          </li>
+          <li>
+            <a href="#faq-6"
+              >Is there an example of a completed form I can reference?</a
+            >
+          </li>
+          <li>
+            <a href="#faq-7">How should I save and submit the completed CRF?</a>
+          </li>
+          <li><a href="#faq-8">What sections are required vs. optional?</a></li>
+          <li>
+            <a href="#faq-9"
+              >My compute environment is heterogeneous (multiple GPU types,
+              different machines). How should I fill out Section 1?</a
+            >
+          </li>
+          <li>
+            <a href="#faq-10"
+              >I don't have exact numbers for everything. What should I do?</a
+            >
+          </li>
+          <li>
+            <a href="#faq-11"
+              >What's the difference between reporting just my final model vs.
+              total development compute?</a
+            >
+          </li>
+          <li>
+            <a href="#faq-12"
+              >Why are you asking for Weights &amp; Biases logs, and do I have
+              to submit them?</a
+            >
+          </li>
+          <li>
+            <a href="#faq-13"
+              >What are the recognition awards, and how are they determined?</a
+            >
+          </li>
+          <li>
+            <a href="#faq-14">How long will this form take to complete?</a>
+          </li>
+          <li>
+            <a href="#faq-15"
+              >What if my paper doesn't fit neatly into your categories?</a
+            >
+          </li>
+          <li>
+            <a href="#faq-16"
+              >Who can I contact if I have questions or concerns?</a
+            >
+          </li>
+        </ol>
+      </section>
+
+      <section class="content-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="policy-item">
+          <p class="policy-desc mb-1" id="faq-1">
+            <strong class="policy-title"
+              >Q. Why are we collecting compute information?</strong
+            >
+          </p>
+          <p class="policy-desc mb-6">
+            A. The Compute Reporting Form (CRF) is a pilot initiative aimed at
+            increasing transparency around computational resources in computer
+            vision research. By collecting this data, we hope to help the
+            community understand the true computational costs of different
+            approaches, provide benchmarking data that can guide future research
+            directions, recognize papers that achieve strong results
+            efficiently, and promote more sustainable and accessible AI research
+            practices. This is an experiment in transparency, not a judgment
+            mechanism.
+          </p>
+
+          <p class="policy-desc mb-1" id="faq-2">
+            <strong class="policy-title"
+              >Q. Will my compute reporting affect my paper's acceptance
+              decision?</strong
+            >
+          </p>
+          <p class="policy-desc mb-6">
+            A. No, absolutely not. Your compute reporting data will NOT be
+            shared with reviewers, Area Chairs, or Senior Area Chairs, and will
+            NOT influence the peer review or acceptance process in any way.
+            Papers are evaluated solely on their scientific merit. The Compute
+            Reporting Committee is completely separate from the review process.
+            For complete information on how your data is protected and used, see
+            our Data Protection and Retention Policy.
+          </p>
+
+          <p class="policy-desc mb-1" id="faq-3">
+            <strong class="policy-title"
+              >Q. How is my CRF data accessed and protected?</strong
+            >
+          </p>
+          <p class="policy-desc mb-6">
+            A. CRF data is processed by the Compute Reporting Committee, which
+            operates independently from the paper review process. Your data is
+            never shared with reviewers, Area Chairs, or Senior Area Chairs. All
+            analyses use anonymized data, and published results are
+            appropriately aggregated to prevent identification of individual
+            submissions. Links between your CRF submission and your paper
+            identity are permanently deleted 6 months after the conference. For
+            complete details, please review our Data Protection and Retention
+            Policy.
+          </p>
+
+          <p class="policy-desc mb-1" id="faq-4">
+            <strong class="policy-title"
+              >Q. How will the CRF data be used?</strong
+            >
+          </p>
+          <p class="policy-desc mb-6">
+            A. The CRF data will be analyzed to understand computational trends
+            or disparities in computer vision research and may inform policy
+            decisions. Key uses include: identifying relationships between
+            computational resources and research outcomes, benchmarking
+            requirements across task categories to reveal barriers to entry,
+            recognizing efficiency innovations, tracking temporal trends in
+            accessibility, estimating environmental impact, establishing
+            reproducibility standards, and understanding how computational
+            advantages affect research velocity. These insights will inform
+            infrastructure initiatives, promote algorithmic efficiency research,
+            and support more equitable access to computational resources.
+          </p>
+
+          <p class="policy-desc mb-1" id="faq-5">
+            <strong class="policy-title"
+              >Q. What if my research used a lot of computational
+              resources?</strong
+            >
+          </p>
+          <p class="policy-desc mb-6">
+            A. Using significant computational resources is not penalized in any
+            way. Many important advances require substantial compute. We're
+            interested in understanding the relationship between compute and
+            performance gains across different approaches. High-compute papers
+            can still be recognized for their contributions and may provide
+            valuable insights about what's possible at different resource
+            scales.
+          </p>
+
+          <p class="policy-desc mb-1" id="faq-6">
+            <strong class="policy-title"
+              >Q. Is there an example of a completed form I can
+              reference?</strong
+            >
+          </p>
+          <p class="policy-desc mb-6">
+            A. Yes! We've provided a prefilled example form showing how to
+            complete each section. You can download it here:
+            <a
+              href="https://media.eventhosts.cc/Conferences/CVPR2026/CVPR26%20CRF%20prefilled%20example.pdf"
+              target="_blank"
+              rel="noopener"
+              ><strong>CVPR26 CRF prefilled example.pdf</strong></a
+            >. This example walks through a sample submission with realistic
+            values and shows how to report hardware specifications, calculate
+            efficiency metrics, provide context for your computational choices,
+            and fill out optional sections.
+          </p>
+
+          <p class="policy-desc mb-1" id="faq-7">
+            <strong class="policy-title"
+              >Q. How should I save and submit the completed CRF?</strong
+            >
+          </p>
+          <p class="policy-desc mb-2">
+            A. Important: Save the original PDF file directly after filling it
+            out. Do not flatten, print to PDF, or otherwise manipulate the form,
+            as this removes the interactive form fields needed for automated
+            data processing.
+          </p>
+          <ul class="policy-list policy-desc mb-6">
+            <li>
+              <strong>Common mistakes to avoid:</strong> Using "Print to PDF" or
+              "Export as PDF" in macOS Preview, flattening the PDF in Adobe
+              Acrobat, or converting to another format and back to PDF.
+            </li>
+            <li>
+              <strong>Correct approach:</strong> Simply fill out the form fields
+              in your PDF reader and save the file using "Save" or "Save As" -
+              this preserves the form data. Submit this saved PDF through the
+              supplementary materials submission system.
+            </li>
+          </ul>
+
+          <p class="policy-desc mb-1" id="faq-8">
+            <strong class="policy-title"
+              >Q. What sections are required vs. optional?</strong
+            >
+          </p>
+          <p class="policy-desc mb-6">
+            A. Only Section 1 (Hardware Specifications) and Section 5
+            (Verification and Submission) are mandatory. These sections take
+            approximately 5 minutes to complete and cover basic information
+            about your hardware infrastructure, as well as verify your
+            submission. Section 2 (Task and Compute Reporting) and all
+            subsequent sections are optional. However, papers that complete
+            Sections 1-3 may be eligible for some recognition awards, while
+            completing all sections (including Section 4 with W&amp;B logs) is
+            required for eligibility for all awards. If you cannot or prefer not
+            to report computational data in the optional sections, you may
+            provide an explanation in Section 5.2 (Additional Comments).
+          </p>
+
+          <p class="policy-desc mb-1" id="faq-9">
+            <strong class="policy-title"
+              >Q. My compute environment is heterogeneous (multiple GPU types,
+              different machines). How should I fill out Section 1?</strong
+            >
+          </p>
+          <p class="policy-desc mb-6">
+            A. For heterogeneous environments, report the primary or most-used
+            hardware configuration in Section 1. You can provide additional
+            details about your heterogeneous setup in one of these ways: use the
+            "Additional Comments" section (5.2) to describe the full range of
+            hardware used; for Section 1 dropdown fields, select the predominant
+            hardware type and note "mixed environment - see comments" in any
+            available text fields; or if using multiple distinct configurations
+            equally, report the one used for your main results. The goal is to
+            capture a representative profile of your computational
+            infrastructure. Perfect precision across all hardware variations is
+            not required.
+          </p>
+
+          <p class="policy-desc mb-1" id="faq-10">
+            <strong class="policy-title"
+              >Q. I don't have exact numbers for everything. What should I
+              do?</strong
+            >
+          </p>
+          <p class="policy-desc mb-6">
+            A. We understand that tracking every computational detail isn't
+            always feasible. For fields you choose to complete, provide your
+            best estimates based on: cloud provider bills or cluster logs,
+            training time multiplied by number of GPUs used, or records from
+            your experiment tracking tools. Remember that only Section 1 is
+            required. Optional sections can be left incomplete if you don't have
+            the data.
+          </p>
+
+          <p class="policy-desc mb-1" id="faq-11">
+            <strong class="policy-title"
+              >Q. What's the difference between reporting just my final model
+              vs. total development compute?</strong
+            >
+          </p>
+          <p class="policy-desc mb-6">
+            A. Section 2 (Optional) asks for the compute needed to reproduce
+            your paper's main result - training and evaluating your final model
+            versus your strongest baseline. This is what readers would need to
+            replicate your work. Section 3 (Optional) asks for total development
+            compute, including all experiments, failed attempts, and iterations.
+            This provides insight into the full research process but is entirely
+            optional.
+          </p>
+
+          <p class="policy-desc mb-1" id="faq-12">
+            <strong class="policy-title"
+              >Q. Why are you asking for Weights &amp; Biases logs, and do I
+              have to submit them?</strong
+            >
+          </p>
+          <p class="policy-desc mb-6">
+            A. W&amp;B log submission is completely optional. Anonymized logs
+            provide more precise efficiency calculations based on actual GPU
+            utilization patterns, which can strengthen your eligibility for
+            recognition awards. We provide an anonymization tool to protect your
+            privacy. Many researchers find it valuable to contribute this data,
+            but there's no penalty for not submitting logs.
+          </p>
+
+          <p class="policy-desc mb-1" id="faq-13">
+            <strong class="policy-title"
+              >Q. What are the recognition awards, and how are they
+              determined?</strong
+            >
+          </p>
+          <p class="policy-desc mb-2">
+            A. Papers that complete sections of the CRF may receive recognition
+            including:
+          </p>
+          <ul class="policy-list policy-desc mb-4">
+            <li>
+              <strong>"Efficient CVPR" Badge</strong> - for strong efficiency
+              within your task category (requires completing Sections 1-3)
+            </li>
+            <li>
+              <strong>"CVPR Compute Gold Star"</strong> - for outstanding
+              efficiency achievements (requires completing Sections 1-3)
+            </li>
+            <li>
+              <strong>"CVPR Compute Transparency Champion"</strong> - for
+              high-quality W&amp;B log submissions (requires completing all
+              sections including Section 4)
+            </li>
+          </ul>
+          <p class="policy-desc mb-6">
+            Awards are determined by the Compute Reporting Committee using
+            objective metrics along with other criteria, with comparisons made
+            within similar task categories to ensure fair comparison. This is
+            about celebrating transparency and efficiency, not creating a
+            ranking system.
+          </p>
+
+          <p class="policy-desc mb-1" id="faq-14">
+            <strong class="policy-title"
+              >Q. How long will this form take to complete?</strong
+            >
+          </p>
+          <p class="policy-desc mb-6">
+            A. Section 1 (Hardware Specifications) and Section 5 (Verification
+            and Submission), which are mandatory, take approximately 5 minutes
+            to complete. If you choose to complete the optional sections:
+            Section 2 adds approximately 10-15 minutes, Section 3 adds
+            additional time, and Section 4 requires time for anonymization if
+            you choose to submit logs. You can complete as much or as little
+            beyond Section 1 as you wish.
+          </p>
+
+          <p class="policy-desc mb-1" id="faq-15">
+            <strong class="policy-title"
+              >Q. What if my paper doesn't fit neatly into your
+              categories?</strong
+            >
+          </p>
+          <p class="policy-desc mb-6">
+            A. We've tried to accommodate diverse research areas, but we know
+            computer vision research is varied. If your work doesn't fit
+            standard categories: use "Other" options and provide brief
+            descriptions in text fields, focus on reporting what's most relevant
+            to your specific contribution, and add context in the "Additional
+            Comments" section (5.2). The goal is to capture meaningful
+            information about your work, not to force it into rigid categories.
+          </p>
+
+          <p class="policy-desc mb-1" id="faq-16">
+            <strong class="policy-title"
+              >Q. Who can I contact if I have questions or concerns?</strong
+            >
+          </p>
+          <ul class="policy-list policy-desc mb-6">
+            <li>
+              For questions about compute reporting:
+              <strong>crf_cvpr2026@computer.org</strong>
+            </li>
+            <li>
+              For W&amp;B anonymization technical issues: Visit the
+              <a
+                href="https://github.com/vipavlovic/wandbanonymizer"
+                target="_blank"
+                rel="noopener"
+                >anonymization tool repository</a
+              >
+            </li>
+            <li>
+              For data protection and privacy questions: Review our
+              <a href="ComputeReportingDataPolicy.html"
+                ><strong>Data Protection and Retention Policy</strong></a
+              >
+              or contact <strong>crf_cvpr2026@computer.org</strong>
+            </li>
+          </ul>
+          <p class="policy-desc">
+            We're here to help make this process as smooth as possible. As a
+            pilot initiative, your feedback will help us improve this program
+            for future conferences.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <div id="auth-modal-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/components.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+/* ==========================================
+   Hotels Page Styles
+   ========================================== */
+
+.pb-12 {
+  padding-bottom: var(--space-12);
+}
+.pt-8 {
+  padding-top: var(--space-8);
+}
+.mb-4 {
+  margin-bottom: var(--space-4);
+}
+.mb-8 {
+  margin-bottom: var(--space-8);
+}
+
+.page-title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-navy);
+}
+
+.lead-text {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
+  max-width: 800px;
+}
+
+/* Hotel Grid */
+.hotel-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .hotel-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Hotel Card Layout */
+.hotel-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.hotel-header {
+  margin-bottom: var(--space-4);
+}
+
+.hotel-name {
+  font-size: var(--font-size-xl);
+  color: var(--color-navy);
+  margin-bottom: var(--space-3);
+  line-height: var(--line-height-tight);
+}
+
+.hotel-rate {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-1);
+}
+
+.rate-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.rate-price {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.rate-night {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.hotel-details {
+  flex-grow: 1;
+  margin-bottom: var(--space-6);
+}
+
+.hotel-deadline {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  background: rgba(18, 4, 227, 0.1);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.hotel-deadline strong {
+  font-weight: var(--font-weight-bold);
+}
+
+.hotel-deadline .icon {
+  flex-shrink: 0;
+}
+
+.hotel-actions {
+  margin-top: auto; /* Pushes the button to the bottom if cards are different heights */
+}

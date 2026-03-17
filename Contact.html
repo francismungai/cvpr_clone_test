@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact CVPR 2026</title>
+    <meta
+      name="description"
+      content="Contact the CVPR 2026 team for website, technical, or submission issues."
+    />
+    <link
+      href="https://cvpr.thecvf.com/Conferences/2026/Contact"
+      rel="canonical"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/call-for-papers.css" />
+
+    <style>
+      .contact-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .contact-header-info {
+        text-align: center;
+        margin-bottom: var(--space-12);
+      }
+
+      .contact-form-card {
+        background: white;
+        border: 1px solid var(--color-border-light);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-md);
+        overflow: hidden;
+        margin-bottom: var(--space-12);
+      }
+
+      .form-header {
+        background: var(--color-navy);
+        color: white;
+        padding: var(--space-4) var(--space-6);
+        font-weight: 600;
+        text-align: center;
+      }
+
+      .form-body {
+        padding: var(--space-8);
+      }
+
+      .form-group {
+        margin-bottom: var(--space-6);
+      }
+
+      .form-group label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: var(--space-2);
+        color: var(--color-text);
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 0.875rem;
+        border: 1px solid var(--color-border-light);
+        border-radius: var(--radius-md);
+        font-family: inherit;
+        font-size: 1rem;
+        transition: border-color 0.2s;
+      }
+
+      .form-control:focus {
+        outline: none;
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+      }
+
+      .radio-group {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-3);
+        background: var(--color-bg-subtle);
+        padding: var(--space-6);
+        border-radius: var(--radius-md);
+        border: 1px solid var(--color-border-light);
+      }
+
+      .radio-option {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        cursor: pointer;
+        font-weight: 400 !important;
+      }
+
+      .btn-submit {
+        background: #16a34a;
+        color: white;
+        padding: 1rem 3rem;
+        border: none;
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        font-size: var(--font-size-lg);
+        cursor: pointer;
+        width: 100%;
+        transition: background 0.2s;
+      }
+
+      .btn-submit:hover {
+        background: #15803d;
+      }
+
+      .address-footer {
+        text-align: center;
+        padding: var(--space-8);
+        border-top: 1px solid var(--color-border-light);
+        background: var(--color-bg-subtle);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="main container pb-12 pt-8" id="main">
+      <div class="contact-container">
+        <header class="contact-header-info">
+          <h1 class="page-title">Contact Us</h1>
+          <p class="lead-text">
+            For the fastest response, use the form below to direct your question
+            to the appropriate team.
+          </p>
+          <p class="policy-desc">
+            Follow CVPR on Twitter:
+            <a href="http://twitter.com/CVPR" target="_blank" rel="noopener"
+              >@CVPR</a
+            >
+          </p>
+        </header>
+
+        <section class="contact-form-card">
+          <div class="form-header">Send a Message to CVPR</div>
+          <div class="form-body">
+            <form method="POST" id="id_contact_form">
+              <input
+                type="hidden"
+                name="csrfmiddlewaretoken"
+                value="ICvRL8BNrTFHDTEBljCi3j2MkuXpZvDzspCvN5ymap5woWWDUoAdTxukjXSI71Un"
+              />
+
+              <div class="form-group">
+                <label for="recipient">Recipient Name</label>
+                <input
+                  id="recipient"
+                  name="recipient"
+                  class="form-control"
+                  placeholder="Optional"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="id_email_from">Your Email Address</label>
+                <input
+                  type="email"
+                  name="email_from"
+                  value=""
+                  maxlength="200"
+                  class="form-control"
+                  placeholder="email@institution.edu"
+                  required
+                  id="id_email_from"
+                />
+              </div>
+
+              <div class="form-group">
+                <label>Inquiry Topic</label>
+                <div class="radio-group" id="id_email_topic">
+                  <label class="radio-option" for="id_email_topic_0">
+                    <input
+                      type="radio"
+                      name="email_topic"
+                      value="lee@eventhosts.cc"
+                      required
+                      id="id_email_topic_0"
+                      checked
+                    />
+                    Website, Technical, Visa Invitation Letters
+                  </label>
+                  <label class="radio-option" for="id_email_topic_1">
+                    <input
+                      type="radio"
+                      name="email_topic"
+                      value="cvpr_2026_pcs@computer.org"
+                      required
+                      id="id_email_topic_1"
+                    />
+                    Program Chairs - Submission Issues
+                  </label>
+                  <label class="radio-option" for="id_email_topic_2">
+                    <input
+                      type="radio"
+                      name="email_topic"
+                      value="tutorials-cvpr-2026@googlegroups.com"
+                      required
+                      id="id_email_topic_2"
+                    />
+                    Tutorials
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="id_email_subject">Subject</label>
+                <input
+                  type="text"
+                  name="email_subject"
+                  maxlength="100"
+                  class="form-control"
+                  required
+                  id="id_email_subject"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="id_email_body">Message Body</label>
+                <textarea
+                  name="email_body"
+                  cols="40"
+                  rows="10"
+                  class="form-control"
+                  required
+                  id="id_email_body"
+                ></textarea>
+              </div>
+
+              <input type="submit" class="btn-submit" value="Submit Inquiry" />
+            </form>
+          </div>
+
+          <footer class="address-footer">
+            <p class="policy-desc mb-0">
+              <strong>Mailing Address:</strong><br />
+              The IEEE/CVF Conference on Computer Vision and Pattern Recognition
+            </p>
+          </footer>
+        </section>
+      </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <div id="auth-modal-placeholder"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/components.js"></script>
+    <script src="js/navbar.js"></script>
+
+    <script nonce="RtY8/sSMXeJMhqb0YD19xQ==">
+      function onSuccess(token) {
+        let contact_form = $("#id_contact_form");
+        contact_form.append(
+          "<input type='hidden' name='token' value='" + token + "'>",
+        );
+        contact_form.submit();
+      }
+    </script>
+  </body>
+</html>

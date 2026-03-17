@@ -1,0 +1,203 @@
+<div class="modal-overlay" id="loginModal" aria-hidden="true">
+  <div
+    class="modal"
+    role="dialog"
+    aria-labelledby="modal-title"
+    aria-modal="true"
+  >
+    <button class="modal-close" aria-label="Close modal">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <div class="modal-tabs" role="tablist">
+      <button
+        class="modal-tab active"
+        role="tab"
+        aria-selected="true"
+        aria-controls="login-panel"
+        id="login-tab"
+      >
+        Login
+      </button>
+      <button
+        class="modal-tab"
+        role="tab"
+        aria-selected="false"
+        aria-controls="signup-panel"
+        id="signup-tab"
+      >
+        Sign Up
+      </button>
+    </div>
+
+    <div
+      class="modal-panel active"
+      id="login-panel"
+      role="tabpanel"
+      aria-labelledby="login-tab"
+    >
+      <form id="login-form" class="auth-form">
+        <div class="form-group">
+          <label for="login-email">Email address</label>
+          <input
+            type="email"
+            id="login-email"
+            name="email"
+            required
+            autocomplete="email"
+            placeholder="email@example.com"
+          />
+        </div>
+        <div class="form-group">
+          <div class="form-label-row">
+            <label for="login-password">Password</label>
+            <button type="button" class="link-btn" id="show-forgot-password">
+              Forgot Password?
+            </button>
+          </div>
+          <div class="password-input-wrapper" style="position: relative">
+            <input
+              type="password"
+              id="login-password"
+              name="password"
+              required
+              autocomplete="current-password"
+            />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Login</button>
+        <div
+          id="login-message"
+          class="form-message"
+          style="
+            display: none;
+            margin-top: 1rem;
+            padding: 0.75rem;
+            border-radius: var(--radius-md);
+            font-size: 0.875rem;
+            text-align: center;
+          "
+        ></div>
+      </form>
+    </div>
+
+    <div
+      class="modal-panel"
+      id="signup-panel"
+      role="tabpanel"
+      aria-labelledby="signup-tab"
+    >
+      <form id="signup-form" class="auth-form">
+        <div class="form-group">
+          <label for="signup-email">Email address</label>
+          <input
+            type="email"
+            id="signup-email"
+            name="email"
+            required
+            autocomplete="email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="signup-password">Password</label>
+          <input
+            type="password"
+            id="signup-password"
+            name="password"
+            required
+            minlength="6"
+            autocomplete="new-password"
+          />
+        </div>
+        <div class="form-group">
+          <label for="signup-confirm-password">Confirm Password</label>
+          <input
+            type="password"
+            id="signup-confirm-password"
+            name="confirm-password"
+            required
+            minlength="6"
+            autocomplete="new-password"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          Create Account
+        </button>
+        <div
+          id="signup-message"
+          class="form-message"
+          style="
+            display: none;
+            margin-top: 1rem;
+            padding: 0.75rem;
+            border-radius: var(--radius-md);
+            font-size: 0.875rem;
+            text-align: center;
+          "
+        ></div>
+      </form>
+    </div>
+
+    <div class="modal-panel" id="forgot-panel" role="tabpanel">
+      <form id="forgot-password-form" class="auth-form">
+        <p class="form-description">
+          Enter your email address and we'll send you a link to reset your
+          password.
+        </p>
+        <div class="form-group">
+          <label for="forgot-email">Email address</label>
+          <input
+            type="email"
+            id="forgot-email"
+            name="email"
+            required
+            autocomplete="email"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          Send Reset Link
+        </button>
+        <button
+          type="button"
+          class="link-btn link-btn-center"
+          id="back-to-login"
+        >
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Back to Login
+        </button>
+        <div
+          id="forgot-message"
+          class="form-message"
+          style="
+            display: none;
+            margin-top: 1rem;
+            padding: 0.75rem;
+            border-radius: var(--radius-md);
+            font-size: 0.875rem;
+            text-align: center;
+          "
+        ></div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,359 @@
+/* ========================================
+   Dates Page Specific Styles
+   ======================================== */
+
+/* Page Header */
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-top: 2rem;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+}
+
+/* Meeting Dates Card */
+.meeting-dates-card {
+  margin-bottom: 2rem;
+  /* Background, border, and padding are handled by the global .card class */
+}
+
+.meeting-dates-card .card-header {
+  border-bottom: 2px solid var(--color-border-light);
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.meeting-dates-card .card-header h2 {
+  color: var(--color-navy);
+  margin: 0;
+}
+
+.meeting-description {
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  margin-bottom: var(--space-6);
+  line-height: var(--line-height-relaxed);
+}
+
+.meeting-schedule {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4);
+  background: var(
+    --color-bg-subtle
+  ); /* Subtle gray instead of translucent white */
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+}
+
+.schedule-event {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.event-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-text-light); /* Standard gray dot */
+  flex-shrink: 0;
+}
+
+.event-dot--primary {
+  background-color: var(
+    --color-primary
+  ); /* Keep the blue just for the main event dot */
+  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.15);
+}
+
+.event-name {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.event-date {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+}
+
+/* Timezone Notice */
+.timezone-notice {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.25rem;
+  background-color: var(--color-bg-secondary);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+}
+
+.timezone-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.timezone-notice a {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+/* Card styles for dates */
+.card {
+  margin-bottom: 2rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.badge--accent {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Dates Table */
+.dates-table-wrapper {
+  overflow-x: auto;
+  margin: 0 -1.5rem;
+  padding: 0 1.5rem;
+}
+
+.dates-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.dates-table thead th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.dates-table thead th:first-child {
+  width: 40px;
+}
+
+.dates-table tbody tr {
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color 0.15s ease;
+}
+
+.dates-table tbody tr:hover:not(.group-header) {
+  background-color: var(--color-bg-secondary);
+}
+
+.dates-table td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+/* Indicator Cell */
+.indicator-cell {
+  width: 40px;
+  text-align: center;
+}
+
+.arrow-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-primary);
+}
+
+/* Event Cell */
+.event-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.event-cell .event-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-primary);
+}
+
+.event-link {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.event-link:hover {
+  color: var(--color-primary);
+}
+
+.event-link.muted {
+  color: var(--color-text-muted);
+}
+
+.event-text {
+  color: var(--color-text);
+}
+
+.event-text.muted,
+.muted {
+  color: var(--color-text-muted);
+}
+
+/* Date Cell */
+.date-cell {
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+/* Countdown Cell */
+.countdown-cell {
+  white-space: nowrap;
+}
+
+.countdown {
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.countdown--active {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* Past Date Row */
+.date-row--past {
+  opacity: 0.6;
+}
+
+/* Current Date Row */
+.date-row--current {
+  background-color: rgba(7, 11, 255, 0.04);
+}
+
+.date-row--current td {
+  border-bottom-color: var(--color-primary);
+}
+
+/* Group Header */
+.group-header {
+  background-color: var(--color-bg-secondary);
+}
+
+.group-header td {
+  padding: 0.75rem 1rem;
+  border-bottom: none;
+}
+
+.group-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .schedule-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .dates-table {
+    font-size: 0.875rem;
+  }
+
+  .dates-table thead {
+    display: none;
+  }
+
+  .dates-table tbody tr {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .dates-table td {
+    padding: 0.25rem 1rem;
+    border: none;
+  }
+
+  .indicator-cell {
+    display: none;
+  }
+
+  .event-cell {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+
+  .date-cell {
+    font-size: 0.8125rem;
+  }
+
+  .countdown-cell {
+    font-size: 0.8125rem;
+  }
+
+  .group-header {
+    margin-top: 1rem;
+  }
+
+  .group-header td {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .meeting-dates-card .card-body {
+    padding: 1rem;
+  }
+
+  .dates-table-wrapper {
+    margin: 0 -1rem;
+    padding: 0 1rem;
+  }
+}

@@ -1,0 +1,871 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CVPR 2026 Reviewer Training Material</title>
+    <meta
+      name="description"
+      content="Training material and best practices for CVPR 2026 Reviewers."
+    />
+    <link
+      href="https://cvpr.thecvf.com/Conferences/2026/ReviewerTrainingMaterial"
+      rel="canonical"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/call-for-papers.css" />
+
+    <style>
+      /* Simple helper for the visual checklist */
+      .checklist {
+        list-style: none;
+        padding-left: 0;
+      }
+      .checklist li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: var(--space-3);
+      }
+      .checklist svg {
+        flex-shrink: 0;
+        margin-right: var(--space-3);
+        margin-top: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="main container pb-12 pt-8" id="main">
+      <h1 class="page-title">Reviewer Training Material</h1>
+
+      <p class="policy-desc mb-8">
+        This training document complements the
+        <a href="ReviewerGuidelines.html">CVPR 2026 Reviewer Guidelines</a> and
+        is adapted from the
+        <a
+          href="https://www.dropbox.com/scl/fi/w8uzbezrm4o3ggwsdeqo1/ReviewerSlides24.key?rlkey=lu99ynx0ui2keju45r7und2tp&dl=0"
+          target="_blank"
+          rel="noopener"
+          >CVPR 2024 Reviewer Slides</a
+        >
+        prepared by the CVPR 2024 Program Chairs and Senior Advisor David
+        Forsyth.
+      </p>
+
+      <section class="content-section mt-8">
+        <h2>Our Principles</h2>
+        <div class="policy-item">
+          <p class="policy-desc">
+            We want to make the best decisions we can to serve the community.
+            Our goal is to be fair, thoughtful, and consistent. We also want our
+            decisions to be transparent—even if an author isn't happy with the
+            outcome, they should be able to see clearly why that decision was
+            made. We aim to keep policies clear and understood by everyone, and
+            by doing so, we hope to minimize confusion, frustration, and
+            appeals.
+          </p>
+        </div>
+
+        <h2 class="mt-8">Your Role as a Reviewer</h2>
+        <div class="policy-item">
+          <p class="policy-desc mb-4">
+            Your job is to make well-reasoned recommendations that help Area
+            Chairs (ACs) decide which papers should be accepted to CVPR. You
+            provide recommendations, not decisions—the final acceptance
+            decisions are made by ACs, Senior Area Chairs, and Program Chairs
+            based on your input and the full context of submissions.
+          </p>
+          <p class="policy-desc mb-4">
+            Your review serves two purposes: it helps decision-makers understand
+            the paper's merits and weaknesses, and it provides constructive
+            feedback to help authors improve their work.
+          </p>
+          <p class="policy-desc mb-4">
+            Use your skill, judgment, and experience to guide your
+            recommendations. Make sure authors understand the basis of your
+            evaluation. Write reviews that clearly explain your reasoning and
+            respond to rebuttals fairly and on time.
+          </p>
+          <p class="policy-desc mb-4">
+            Treat everyone involved with fairness, compassion, and consistency.
+            Support your opinions with evidence, and avoid making up your own
+            policies. Maintain professional objectivity—focus on the work
+            itself, not your assumptions about the authors.
+          </p>
+          <p class="policy-desc">
+            Always act ethically and expect the same from others. If you notice
+            any improprieties, report them through the proper channels. Avoid
+            conflicts of interest at all times. <br /><br />
+            <em
+              >See also:
+              <a href="ReviewerGuidelines.html#reviewing-process"
+                >Reviewing Process</a
+              ></em
+            >
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>What Should Be Accepted?</h2>
+        <div class="policy-item">
+          <p class="policy-desc mb-4">
+            Recommend acceptance for papers that will interest CVPR attendees,
+            are technically sound, and contribute meaningfully
+            (methodologically, empirically, or conceptually). Balance novelty
+            with significance and potential impact.
+          </p>
+          <p class="policy-desc mb-2">
+            <strong class="policy-title">Key principles:</strong>
+          </p>
+          <ul class="policy-list policy-desc mb-4">
+            <li>
+              Minor fixable issues should not drive rejection decisions. Focus
+              on fundamental soundness and contribution.
+            </li>
+            <li>
+              Scope judgments should be cautious; CVPR values breadth. If truly
+              out of scope, explain clearly and suggest better venues.
+            </li>
+            <li>
+              Consider reproducibility, data contribution, ethical data use,
+              societal impact, and limitations discussions positively.
+            </li>
+            <li>
+              A paper doesn't need to be perfect to be accepted—it needs to
+              advance the field and meet quality standards.
+            </li>
+          </ul>
+          <p class="policy-desc">
+            <em
+              >See:
+              <a href="ReviewerGuidelines.html#what-to-look-for"
+                >What to Look Out For</a
+              ></em
+            >
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Responsible and Timely Reviewing</h2>
+        <div class="policy-item">
+          <p class="policy-desc mb-4">
+            CVPR 2026 strictly enforces the
+            <a href="ReviewerGuidelines.html#responsible-reviewing"
+              >Responsible Reviewing Policy</a
+            >
+            and
+            <a href="ReviewerGuidelines.html#deadline-policy"
+              >Reviewing Deadline Policy</a
+            >.
+          </p>
+          <p class="policy-desc mb-2">
+            <strong class="policy-title">Irresponsible reviews include:</strong>
+          </p>
+          <ul class="policy-list policy-desc mb-4">
+            <li>Short or generic text not tied to the paper's specifics</li>
+            <li>Factual errors suggesting superficial reading</li>
+            <li>Content generated or substantially assisted by LLMs</li>
+          </ul>
+          <p
+            class="policy-desc"
+            style="color: var(--color-error); font-weight: 600"
+          >
+            Consequences: Irresponsible or late reviews may trigger desk
+            rejection of all papers on which the reviewer is an author.
+          </p>
+        </div>
+
+        <h2 class="mt-8">Ethics and Confidentiality</h2>
+        <div class="policy-item">
+          <p class="policy-desc mb-4">
+            Protect anonymity, confidentiality, and the intellectual content of
+            submissions. Do not share, reuse, or build on ideas from
+            submissions. Destroy materials after the process.
+          </p>
+          <p class="policy-desc mb-2">
+            <strong class="policy-title">Key requirements:</strong>
+          </p>
+          <ul class="policy-list policy-desc">
+            <li>
+              Respect double-blind review and avoid author-identity searches
+            </li>
+            <li>Declare and avoid conflicts of interest promptly</li>
+            <li>
+              Handle human subjects and personal data with heightened scrutiny
+            </li>
+            <li>Never discuss submissions outside the review process</li>
+          </ul>
+        </div>
+
+        <h2 class="mt-8">Large Language Models (LLMs)</h2>
+        <div class="policy-item">
+          <p class="policy-desc mb-4">
+            LLMs must not be used to generate, translate, paraphrase, or
+            otherwise compose review content. Sharing any part of any submission
+            (the paper, quotes from the paper, captions, figures, etc.) with
+            LLMs is strictly prohibited.
+          </p>
+
+          <p class="policy-desc mb-2">
+            <strong class="policy-title">Permitted uses:</strong>
+          </p>
+          <ul class="policy-list policy-desc mb-4">
+            <li>
+              Non-confidential background research on publicly available
+              concepts or methods (not the submission itself)
+            </li>
+            <li>
+              Grammar checks of short phrases you have already written (under
+              ~50 words, containing no submission-specific content)
+            </li>
+          </ul>
+
+          <p class="policy-desc mb-2">
+            <strong class="policy-title">Prohibited uses:</strong>
+          </p>
+          <ul class="policy-list policy-desc mb-4">
+            <li>
+              Inputting any text, figures, or content from the submission into
+              an LLM
+            </li>
+            <li>Using LLMs to summarize, paraphrase, or analyze the paper</li>
+            <li>Using LLMs to draft any portion of your review</li>
+            <li>Using LLMs to translate the paper or your review</li>
+          </ul>
+
+          <p class="policy-desc">
+            <strong class="policy-title" style="color: var(--color-error)"
+              >Enforcement:</strong
+            >
+            Reviewers who violate this policy may be barred from submitting to
+            CVPR for two years. Report suspected prompt injection (hidden
+            instructions in papers) to AC/PCs immediately.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Review Workflow</h2>
+
+        <div class="policy-item">
+          <h3 class="section-subtitle">Step 1: Preparation</h3>
+          <ul class="policy-list policy-desc mb-6">
+            <li>Inspect your stack promptly for conflicts and suitability</li>
+            <li>
+              Review your stack holistically and plan your time wisely. Allocate
+              effort based on each paper's complexity and scope.
+            </li>
+            <li>Inform your AC immediately if reassignment is needed</li>
+            <li>Review relevant policies and guidelines</li>
+            <li>
+              If you suspect a policy violation, alert the Chairs but review as
+              if no violation occurred (they will investigate separately)
+            </li>
+          </ul>
+
+          <h3 class="section-subtitle">
+            Step 2: Careful Reading and Brief Summary
+          </h3>
+          <ul class="policy-list policy-desc mb-6">
+            <li>Read the paper thoroughly, taking notes as you go</li>
+            <li>
+              Draft a short, accurate summary in your own words (2-4 sentences)
+            </li>
+            <li>
+              This summary helps reveal gaps in your understanding—if you can't
+              summarize it clearly, read again
+            </li>
+            <li>
+              Assess correctness, completeness, clarity of contribution, and
+              positioning versus prior work
+            </li>
+            <li>
+              Identify the paper's core claims and evaluate the evidence
+              supporting them
+            </li>
+          </ul>
+
+          <h3 class="section-subtitle">Step 3: Writing the Review</h3>
+          <p class="policy-desc mb-2">Your review should include:</p>
+          <ol class="ordered-policy-list policy-desc mb-4">
+            <li>
+              Concise summary (2-4 sentences covering what the paper does and
+              claims)
+            </li>
+            <li>Strengths (specific, evidence-based points)</li>
+            <li>Weaknesses (specific, evidence-based concerns)</li>
+            <li>
+              Constructive suggestions (how authors could address weaknesses)
+            </li>
+            <li>
+              Justified recommendation (clearly connecting your assessment to
+              your rating)
+            </li>
+          </ol>
+          <p class="policy-desc mb-2">Important guidelines:</p>
+          <ul class="policy-list policy-desc mb-6">
+            <li>
+              Back "done before" claims with specific references and explain the
+              relationship to prior work
+            </li>
+            <li>
+              Do not over-weight SOTA tables alone—consider experimental design,
+              insights, and broader contributions
+            </li>
+            <li>
+              Keep tone professional; avoid second-person address ("you" or "the
+              authors"); use "the paper" instead
+            </li>
+            <li>
+              Be specific and concrete; avoid vague statements like "the paper
+              is interesting" or "the results are good"
+            </li>
+          </ul>
+
+          <h3 class="section-subtitle">Step 4: Rebuttal and Discussion</h3>
+          <ul class="policy-list policy-desc mb-6">
+            <li>Read the rebuttal carefully and engage substantively</li>
+            <li>
+              Update your ratings and review if the rebuttal addresses your
+              concerns
+            </li>
+            <li>Explain what changed your mind and why</li>
+            <li>
+              Do not demand substantial new experiments in rebuttal; small,
+              reasonable checks are acceptable
+            </li>
+            <li>
+              Focus on clarifications and addressing misunderstandings rather
+              than requesting new work
+            </li>
+          </ul>
+
+          <h3 class="section-subtitle">Step 5: Finalization</h3>
+          <ul class="policy-list policy-desc">
+            <li>Participate in AC-reviewer discussions</li>
+            <li>Ensure your reasoning is clear to the AC</li>
+            <li>
+              Submit your final rating and well-justified final recommendation
+              by the deadline
+            </li>
+            <li>
+              Your final justification should be specific, evidence-based, and
+              clearly connected to your rating
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Writing Effective Final Justifications</h2>
+        <div class="policy-item">
+          <p class="policy-desc mb-4">
+            Your final justification should clearly explain your recommendation
+            and how you weighed the paper's strengths and weaknesses.
+          </p>
+
+          <h3 class="section-subtitle" style="color: var(--color-error)">
+            Unacceptable Final Justifications
+          </h3>
+          <p class="policy-desc mb-2">Generic or vague statements:</p>
+          <ul class="policy-list policy-desc mb-4">
+            <li>"The paper is good overall."</li>
+            <li>"The work is okay but not outstanding."</li>
+            <li>"The paper seems solid, so I recommend accept."</li>
+          </ul>
+          <p class="policy-desc mb-2">Contradictory or unsupported logic:</p>
+          <ul class="policy-list policy-desc mb-4">
+            <li>"The paper is technically sound, but I recommend reject."</li>
+            <li>
+              "The method is novel and performs well, but I'm not convinced."
+            </li>
+          </ul>
+          <p class="policy-desc mb-2">
+            No explanation for change after rebuttal:
+          </p>
+          <ul class="policy-list policy-desc mb-6">
+            <li>
+              "The rebuttal addresses my concerns, so I increase my score."
+              (What concerns? How?)
+            </li>
+            <li>
+              "The rebuttal doesn't change my opinion, so I keep my score." (Why
+              not? What was unconvincing?)
+            </li>
+          </ul>
+
+          <h3 class="section-subtitle" style="color: #059669">
+            Good Final Justification Examples
+          </h3>
+          <p class="policy-desc mb-4">
+            <strong>Strong Accept:</strong> "The paper makes a significant
+            contribution to few-shot learning by introducing a novel
+            meta-learning framework that substantially outperforms existing
+            methods across multiple benchmarks. The theoretical analysis
+            provides valuable insights into why the approach works (see Figure
+            x), and the extensive ablations (see Tables x and y) demonstrate
+            robustness. The rebuttal successfully addressed concerns about
+            computational cost by providing detailed timing comparisons. The
+            work will be of broad interest to the CVPR community and likely to
+            inspire follow-up research. I maintain my rating of Strong Accept."
+          </p>
+          <p class="policy-desc mb-4">
+            <strong>Weak Accept:</strong> "The paper presents a technically
+            sound approach with clear motivation and well-designed experiments
+            (see Section x). While it does not outperform all existing methods
+            (see Table x), it provides valuable insights into the trade-offs
+            between efficiency and accuracy in semantic segmentation. The
+            rebuttal clarified the novelty compared to [Smith et al., 2025] by
+            highlighting the different architectural choices and their impact on
+            inference speed. The contribution is solid though incremental. I
+            maintain my rating of Weak Accept."
+          </p>
+          <p class="policy-desc mb-4">
+            <strong>Reject:</strong> "The paper has fundamental technical issues
+            that were not adequately addressed in the rebuttal. Specifically,
+            the loss function in Equation 3 does not properly account for class
+            imbalance, which likely explains the poor performance on minority
+            classes shown in Table 2. The rebuttal claimed this was addressed by
+            weighting, but no weighted results were provided. Additionally, the
+            paper omits comparisons with standard baselines [Zhang et al., 2024;
+            Liu et al., 2025] that are directly relevant. Without these
+            comparisons and a fix to the technical issue, the contribution
+            cannot be properly assessed. I maintain Reject."
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Common Reviewing Pitfalls</h2>
+        <p class="policy-desc mb-4">
+          Almost all reviewing errors stem from a combination of laziness ("why
+          should I check? I'm busy!") and self-importance ("why should I bother
+          explaining myself? I'm an expert"). Ground your judgments in evidence,
+          citations, and clear reasoning. Avoid sarcasm or dismissive tone.
+        </p>
+
+        <div class="table-responsive mb-8">
+          <table
+            class="dates-table"
+            style="table-layout: fixed; width: 100%; min-width: 800px"
+          >
+            <thead>
+              <tr>
+                <th style="width: 18%">Error Type</th>
+                <th style="width: 35%">Bad Practice</th>
+                <th style="width: 47%">Better Practice</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Ignorance / Inaccuracy</strong></td>
+                <td>"This theorem is false" without justification.</td>
+                <td>
+                  "I believe there may be an issue with Theorem 1. Specifically,
+                  the assumption in line 3 that X is positive seems to require
+                  additional constraints. Could the authors clarify?"
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  "The dataset is too small to be valid" without checking its
+                  scope.
+                </td>
+                <td>
+                  "The dataset contains 5K images. While smaller than benchmarks
+                  like ImageNet, it appears sufficient for the task. However,
+                  ablations on size would strengthen claims."
+                </td>
+              </tr>
+              <tr style="background-color: var(--color-bg-subtle)">
+                <td><strong>Pure Opinion</strong></td>
+                <td>"CNNs are not interesting."</td>
+                <td>
+                  "While CNNs are well-established, this paper's contribution
+                  lies in [specific innovation]. The relevance depends on
+                  whether the community values [specific aspect]."
+                </td>
+              </tr>
+              <tr style="background-color: var(--color-bg-subtle)">
+                <td></td>
+                <td>"This problem isn't exciting anymore."</td>
+                <td>
+                  "This problem has been extensively studied [cite examples].
+                  The paper would be strengthened by clarifying what challenges
+                  remain unsolved and why this approach addresses them."
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Novelty Fallacy</strong></td>
+                <td>"It must be accepted because it's novel."</td>
+                <td>
+                  "The approach is novel in combining X and Y. However, the
+                  empirical gains are modest (2%), and the paper would benefit
+                  from analysis of when and why this helps."
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>"It's just a small tweak, so it shouldn't be accepted."</td>
+                <td>
+                  "While the modification to [existing method] is incremental,
+                  the paper provides valuable insights into [specific aspect]
+                  and achieves strong results with lower computational cost."
+                </td>
+              </tr>
+              <tr style="background-color: var(--color-bg-subtle)">
+                <td><strong>Blank Assertions</strong></td>
+                <td>"This has been done before." (no citations)</td>
+                <td>
+                  "The approach shares similarities with [Smith et al., 2024]
+                  and [Jones et al., 2025]. The key differences appear to be [X
+                  and Y]. The relationship should be clarified."
+                </td>
+              </tr>
+              <tr style="background-color: var(--color-bg-subtle)">
+                <td><strong>Policy Entrepreneurism</strong></td>
+                <td>"You must beat SOTA on all benchmarks."</td>
+                <td>
+                  "The method shows competitive performance on [benchmark A] but
+                  underperforms on [benchmark B]. Understanding this performance
+                  gap would strengthen the contribution."
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Intellectual Laziness</strong></td>
+                <td>"Beats SOTA ⇒ accept." / "Fails SOTA ⇒ reject."</td>
+                <td>
+                  "The method achieves SOTA on [benchmark], but the gains come
+                  primarily from using more training data. Architectural
+                  contributions should be evaluated more carefully."
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Final Review Checklist</h2>
+        <div class="policy-item mb-8">
+          <p class="policy-desc mb-4">Before submitting your review, verify:</p>
+          <ul class="checklist policy-desc">
+            <li>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="var(--color-primary)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              </svg>
+              Brief, accurate paper summary present?
+            </li>
+            <li>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="var(--color-primary)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              </svg>
+              Has the paper been checked for standard errors? (Incorrect math,
+              omitted context, done before)
+            </li>
+            <li>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="var(--color-primary)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              </svg>
+              Strengths and weaknesses stated with specific evidence?
+            </li>
+            <li>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="var(--color-primary)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              </svg>
+              Is the review too short?
+            </li>
+            <li>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="var(--color-primary)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              </svg>
+              Tone professional and constructive throughout?
+            </li>
+            <li>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="var(--color-primary)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              </svg>
+              Policy compliance (LLM use, confidentiality, conflicts) checked?
+            </li>
+            <li>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="var(--color-primary)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              </svg>
+              Submitted before the deadline?
+            </li>
+          </ul>
+        </div>
+
+        <h2>When to Escalate</h2>
+        <div class="policy-item">
+          <p class="policy-desc mb-2">
+            Immediately alert your AC (who will coordinate with SACs and PCs) if
+            you suspect:
+          </p>
+          <ul class="policy-list policy-desc mb-4">
+            <li>Plagiarism or self-plagiarism</li>
+            <li>Dual submission to multiple venues</li>
+            <li>Unethical data use or privacy violations</li>
+            <li>Fabricated results or falsified experiments</li>
+            <li>Violation of withdrawn-dataset norms</li>
+            <li>Prompt injection or LLM abuse</li>
+            <li>Violations of human subjects research protocols</li>
+          </ul>
+          <p class="policy-desc" style="font-weight: 600">
+            Do not investigate independently. Report your concerns and let the
+            appropriate committees handle the investigation.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>FAQ for Reviewers</h2>
+        <div class="policy-item mb-12">
+          <p class="policy-desc mb-1">
+            <strong class="policy-title"
+              >Q: How much time should I spend on each review?</strong
+            >
+          </p>
+          <p class="policy-desc mb-4">
+            A: It really depends on the paper. Plan for 4-6 hours per paper
+            total but note that understanding a paper may also take much more
+            time: 1-2 hours for reading, 2-3 hours for writing the review, and
+            1-2 hours for rebuttal response and discussion.
+          </p>
+
+          <p class="policy-desc mb-1">
+            <strong class="policy-title"
+              >Q: What if I'm assigned a paper well outside my
+              expertise?</strong
+            >
+          </p>
+          <p class="policy-desc mb-4">
+            A: Contact your AC immediately. You can still review it if you're
+            comfortable, but clearly state your expertise limitations in your
+            review. The AC may assign an additional reviewer with more specific
+            expertise.
+          </p>
+
+          <p class="policy-desc mb-1">
+            <strong class="policy-title"
+              >Q: Can I search for the authors' identities to assess their
+              credibility?</strong
+            >
+          </p>
+          <p class="policy-desc mb-4">
+            A: No. This violates double-blind review. Assess the work on its own
+            merits.
+          </p>
+
+          <p class="policy-desc mb-1">
+            <strong class="policy-title"
+              >Q: What if the paper violates anonymity (e.g., includes
+              identifying information)?</strong
+            >
+          </p>
+          <p class="policy-desc mb-4">
+            A: Report it to your AC, but continue to review the work itself. The
+            AC and PCs will determine if the violation warrants action.
+          </p>
+
+          <p class="policy-desc mb-1">
+            <strong class="policy-title"
+              >Q: How should I handle a rebuttal that promises to "fix
+              everything" but doesn't provide evidence?</strong
+            >
+          </p>
+          <p class="policy-desc mb-4">
+            A: Evaluate based on what the rebuttal actually demonstrates, not
+            what it promises for the camera-ready version. Promises without
+            evidence should not change your assessment.
+          </p>
+
+          <p class="policy-desc mb-1">
+            <strong class="policy-title"
+              >Q: Can I use an LLM to help me understand a complex mathematical
+              concept in the paper?</strong
+            >
+          </p>
+          <p class="policy-desc mb-4">
+            A: You can research the general concept (e.g., "How does implicit
+            differentiation work?") without sharing any content from the
+            submission. You cannot input equations, text, or any other content
+            from the paper into an LLM.
+          </p>
+        </div>
+
+        <div
+          class="card"
+          style="
+            background: var(--color-bg-subtle);
+            border-left: 4px solid var(--color-navy);
+          "
+        >
+          <h2
+            style="
+              font-size: var(--font-size-xl);
+              margin-bottom: var(--space-4);
+            "
+          >
+            Quick Reference Card
+          </h2>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+              gap: var(--space-6);
+            "
+          >
+            <div>
+              <h3 class="section-subtitle">Key Deadlines</h3>
+              <ul class="policy-list policy-desc">
+                <li>Paper assignment: Dec 15, 2025</li>
+                <li>Review submission: Jan 12, 2026</li>
+                <li>Rebuttal period: Jan 22 - Jan 29, 2026</li>
+                <li>Discussion period: Jan 30 - Feb 5, 2026</li>
+                <li>Final recommendations: Feb 5, 2026</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="section-subtitle">Dos and Don'ts</h3>
+              <ul
+                class="policy-list policy-desc"
+                style="list-style-type: none; padding-left: 0"
+              >
+                <li style="color: #059669; margin-bottom: 4px">
+                  ✓ Ground judgments in evidence
+                </li>
+                <li style="color: #059669; margin-bottom: 4px">
+                  ✓ Be specific and constructive
+                </li>
+                <li style="color: #059669; margin-bottom: 4px">
+                  ✓ Engage substantively with rebuttals
+                </li>
+                <li style="color: var(--color-error); margin-bottom: 4px">
+                  ✗ Use LLMs to generate review content
+                </li>
+                <li style="color: var(--color-error); margin-bottom: 4px">
+                  ✗ Share submission content
+                </li>
+                <li style="color: var(--color-error); margin-bottom: 4px">
+                  ✗ Search for author identities
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="section-subtitle">Contact for Issues</h3>
+              <ul class="policy-list policy-desc">
+                <li><strong>Assignment/Conflicts:</strong> Contact AC</li>
+                <li><strong>Policy/Ethics:</strong> Contact AC</li>
+                <li>
+                  <strong>OpenReview Help:</strong>
+                  <a href="mailto:info@openreview.net">info@openreview.net</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="text-center mt-12">
+        <p
+          class="policy-desc"
+          style="font-weight: 600; color: var(--color-primary)"
+        >
+          Remember: Quality reviews serve both the community and the authors.
+          Your careful, thoughtful work helps ensure CVPR publishes excellent
+          research and helps authors improve their work—whether or not it's
+          accepted.
+        </p>
+      </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <div id="auth-modal-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/components.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>
