@@ -110,5 +110,33 @@
         document.querySelector(".user-dropdown")?.classList.remove("open");
       }
     });
+
+    // --- Auto-Open Login Modal from Redirect ---
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get("login") === "true") {
+      const modal = document.getElementById("loginModal");
+      if (modal) {
+        // Trigger the same logic as the login button
+        modal.classList.add("open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+
+        // If you want to show a "Password updated" message in the modal itself:
+        const loginMessage = document.getElementById("login-message");
+        if (loginMessage) {
+          loginMessage.textContent =
+            "Password updated! Please log in with your new password.";
+          loginMessage.className = "form-message success";
+          loginMessage.style.display = "block";
+        }
+
+        // Clean up the URL so refreshing doesn't keep opening the modal
+        window.history.replaceState(
+          {},
+          document.title,
+          window.location.pathname,
+        );
+      }
+    }
   });
 })();

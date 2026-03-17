@@ -1,58 +1,85 @@
-const SUPABASE_URL = 'https://frwedgprpfgkmhngbclc.supabase.co';
-const SUPABASE_KEY = 'sb_publishable_fOehLASCcRaDMQxWtfOuZg_8WVM5RD9';
+/**
+ * Password Reset Logic - Supabase Integration
+ */
+(function () {
+  "use strict";
 
-// Initialize Supabase client
-const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+  const SUPABASE_URL = "https://frwedgprpfgkmhngbclc.supabase.co";
+  const SUPABASE_KEY = "sb_publishable_fOehLASCcRaDMQxWtfOuZg_8WVM5RD9";
 
-document.addEventListener('DOMContentLoaded', () => {
-    const resetForm = document.getElementById('reset-password-form');
-    const messageEl = document.getElementById('reset-message');
-    const backToHome = document.getElementById('back-to-home-container');
+  const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY,
+  );
 
-    // When the user clicks the link in their email, Supabase processes the hash in the URL 
-    // and automatically logs them in establishing an active session on this loaded page.
-    
-    resetForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
+  document.addEventListener("DOMContentLoaded", () => {
+    const resetForm = document.getElementById("reset-password-form");
+    const messageEl = document.getElementById("reset-message");
+    const submitBtn = document.getElementById("reset-submit-btn");
 
-        const newPassword = document.getElementById('new-password').value;
-        const confirmNewPassword = document.getElementById('confirm-new-password').value;
+    if (!resetForm) return;
 
-        if (newPassword !== confirmNewPassword) {
-            messageEl.textContent = 'Passwords do not match.';
-            messageEl.className = 'text-danger mt-2';
-            return;
+    // Helper to match your custom alert styles
+    function showMessage(message, type) {
+      if (!messageEl) return;
+      messageEl.textContent = message;
+      messageEl.className = `form-message ${type}`;
+      messageEl.style.display = "block";
+    }
+
+    resetForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const newPassword = document.getElementById("new-password").value;
+      const confirmNewPassword =
+        document.getElementById("confirm-password").value;
+
+      if (newPassword !== confirmNewPassword) {
+        showMessage("Passwords do not match.", "error");
+        return;
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Updating...";
+      }
+
+      // Update password using the session from the emailed link
+      const { error } = await supabaseClient.auth.updateUser({
+        password: newPassword,
+      });
+
+      if (error) {
+        showMessage(error.message, "error");
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Update Password";
         }
+      } else {
+        showMessage(
+          "Success! Your password has been updated. Redirecting...",
+          "success",
+        );
 
-        messageEl.textContent = 'Updating password...';
-        messageEl.className = 'text-primary mt-2';
+        // Log out to force a fresh login with the new credentials
+        await supabaseClient.auth.signOut();
 
-        // Update the user's password using the active session from the emailed link (or if they are already logged in)
-        const { data, error } = await supabaseClient.auth.updateUser({
-            password: newPassword
-        });
-
-        if (error) {
-            messageEl.textContent = error.message;
-            messageEl.className = 'text-danger mt-2';
-        } else {
-            messageEl.textContent = 'Success! Your password has been successfully updated.';
-            messageEl.className = 'text-success mt-2 fw-bold';
-            resetForm.style.display = 'none';
-            backToHome.classList.remove('d-none');
-            
-            // Log out the user to force them to log in with the new password
-            await supabaseClient.auth.signOut();
-        }
+        // Redirect to home with the login modal trigger
+        setTimeout(() => {
+          window.location.href = "index.html?login=true";
+        }, 2000);
+      }
     });
 
-    // Check if the user is actually authenticated
+    // Verify session exists (ensure they used the email link)
     supabaseClient.auth.getSession().then(({ data: { session } }) => {
-        if (!session) {
-            messageEl.textContent = 'Error: No active session found. You must use the link sent to your email or be logged in to reset your password.';
-            messageEl.className = 'text-danger mt-2';
-            resetForm.querySelector('button[type="submit"]').disabled = true;
-            backToHome.classList.remove('d-none');
-        }
+      if (!session) {
+        showMessage(
+          "Error: No active session found. Please use the link sent to your email.",
+          "error",
+        );
+        if (submitBtn) submitBtn.disabled = true;
+      }
     });
-});
+  });
+})();

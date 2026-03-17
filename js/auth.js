@@ -139,11 +139,7 @@
         if (error) {
           showMessage(messageEl, error.message, "error");
         } else {
-          showMessage(
-            messageEl,
-            "Success! Please check your email for confirmation.",
-            "success",
-          );
+          showMessage(messageEl, "Success!", "success");
           signupForm.reset();
 
           // Switch back to login tab after 2 seconds
